@@ -1,0 +1,15 @@
+@use '@angular/material' as mat;
+@import './palettes';
+
+$slicer-primary-palette: mat.define-palette($primary-palette);
+$slicer-warn-palette: mat.define-palette($error-palette);
+
+$slicer-theme: mat.define-light-theme((
+  color: (
+    primary: $slicer-primary-palette,
+    // using primary palette here, because accent colors are used
+    // in checkboxes, radio buttons and some other components
+    accent: $slicer-primary-palette,
+    warn: $slicer-warn-palette
+  )
+));
